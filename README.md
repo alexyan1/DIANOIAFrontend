@@ -97,13 +97,10 @@ The frontend needs to know where the backend API lives.
 cp .env.example .env.local
 ```
 
-2) Edit `.env.local` and set:
-```txt
-NEXT_PUBLIC_DIANOIA_API_BASE=http://localhost:8000
-```
 
 Notes:
 - `.env.local` is **your machine only** (never commit it)
+- In `.git.ignore` **on the seocnd line, type .env.local so the file never commits. PLEASE**
 - If your backend runs somewhere else, use that URL instead.
 
 ---
@@ -125,7 +122,7 @@ Stop the server:
 
 ---
 
-## 5) (Optional but recommended) Run the backend too
+## 5) IGNORE (Optional but recommended) Run the backend too
 
 If you want real results (not mocks), run the DIANOIA backend on port `8000`.
 
