@@ -8,7 +8,6 @@ export default function Home() {
     <main className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg"
       style={{ background: "radial-gradient(ellipse at 50% 50%, #0d0d2b 0%, #050510 60%, #000 100%)" }}>
       <StarField />
-      <Floaters />
       <Orbs />
       <HeroText />
     </main>

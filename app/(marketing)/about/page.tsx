@@ -1,5 +1,5 @@
 import { SpaceBackground } from "@/components/landing/space-background";
 
-export default function AnalyzePage() {
+export default function AboutPage() {
   return <SpaceBackground />;
 }
