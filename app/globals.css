@@ -42,7 +42,7 @@ html, body {
   0%,94%,100% { clip-path: none; transform: none; }
   95% { clip-path: polygon(0 20%,100% 20%,100% 40%,0 40%); transform: translate(-4px,0); }
   96% { clip-path: polygon(0 60%,100% 60%,100% 80%,0 80%); transform: translate(4px,0); }
-  98% { clip-path: polygon(0 10%,100% 10%,100% 30%,0 30%); transform: translate(-2px,0); color: #f43f5e; }
+  98% { clip-path: polygon(0 10%,100% 10%,100% 30%,0 30%); transform: translate(-2px,0); ; }
   99% { clip-path: none; transform: none; }
 }
 
@@ -52,7 +52,7 @@ html, body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer 4s linear infinite;
+  animation: shimmer 100s linear infinite;
 }
 
 .grid-bg {

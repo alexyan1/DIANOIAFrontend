@@ -1,6 +1,5 @@
 "use client";
 import * as React from "react";
-import Link from "next/link";
 import { StarField } from "@/components/landing/star-field";
 import InputPanel from "@/components/analyze/input-panel";
 import { Orbs } from "@/components/landing/orbs";
@@ -18,17 +17,7 @@ export default function AnalyzePage() {
       <StarField />
       <Orbs />
 
-      <Link
-        href="/"
-        scroll={false}
-        className="absolute top-7 left-8 z-20 group font-mono text-base tracking-[0.2em] uppercase text-white/80 hover:text-fuchsia-300 transition-colors duration-300"
-      >
-        <span className="group-hover:drop-shadow-[0_0_12px_rgba(232,121,249,0.9)] transition-all duration-300">
-          ← DIANOIA
-        </span>
-      </Link>
-
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-6">
+<div className="relative z-10 min-h-screen flex items-center justify-center px-6">
         <div className="w-full max-w-3xl">
           <div className="text-left">
             <div className="text-white font-serif text-4xl sm:text-5xl font-semibold tracking-tight"
