@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const MOCK_ANALYSES = [
@@ -19,13 +20,13 @@ export function DashboardSidebar() {
         onClick={() => setOpen((v) => !v)}
         animate={{ left: open ? 320 : 0 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-[42%] -translate-y-1/2 z-50 flex flex-col items-center justify-center gap-1.5 py-5 px-2 rounded-r-xl bg-black/50 backdrop-blur hover:bg-black/70 transition-colors duration-200 group border-t border-r border-b border-fuchsia-400/50"
-        style={{ boxShadow: "0 0 24px rgba(232,121,249,0.25), 0 0 8px rgba(232,121,249,0.15)" }}
+        className="fixed top-[42%] -translate-y-1/2 z-50 flex flex-col items-center justify-center gap-1.5 py-5 px-2 rounded-r-xl bg-black/70 backdrop-blur hover:bg-black/90 transition-colors duration-200 group border-t border-r border-b border-fuchsia-400/80"
+        style={{ boxShadow: "0 0 16px rgba(232,121,249,0.6), 0 0 40px rgba(232,121,249,0.25), inset 0 0 8px rgba(232,121,249,0.05)" }}
         aria-label="Toggle dashboard"
       >
-        <span className="block w-4 h-px bg-white/70 group-hover:bg-fuchsia-300 transition-colors duration-200" />
-        <span className="block w-4 h-px bg-white/70 group-hover:bg-fuchsia-300 transition-colors duration-200" />
-        <span className="block w-4 h-px bg-white/70 group-hover:bg-fuchsia-300 transition-colors duration-200" />
+        <span className="block w-4 h-0.5 bg-white/90 group-hover:bg-fuchsia-300 transition-colors duration-200" />
+        <span className="block w-4 h-0.5 bg-white/90 group-hover:bg-fuchsia-300 transition-colors duration-200" />
+        <span className="block w-4 h-0.5 bg-white/90 group-hover:bg-fuchsia-300 transition-colors duration-200" />
       </motion.button>
 
       {/* background */}
@@ -63,15 +64,16 @@ export function DashboardSidebar() {
               {/* header bottom gradient line */}
               <div className="absolute bottom-0 left-0 right-0 h-px"
                 style={{ background: "linear-gradient(90deg, transparent, #e879f9, #c084fc, #818cf8, transparent)", filter: "brightness(1.4)" }} />
-              <p
-                className="font-serif text-2xl text-white"
+              <Link
+                href="/"
+                onClick={() => setOpen(false)}
+                className="font-serif text-2xl text-white hover:text-fuchsia-300 transition-colors duration-300"
                 style={{
                   textShadow: "0 0 40px rgba(255,255,255,0.2)",
-                  animation: "flicker 3s infinite",
                 }}
               >
                 DIANOIA
-              </p>
+              </Link>
               <p className="mt-1 font-mono text-[10px] tracking-[0.2em] uppercase text-white/70">
                 Analysis history
               </p>

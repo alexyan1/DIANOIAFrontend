@@ -10,6 +10,7 @@ export default function Home() {
       <StarField />
       <Orbs />
       <HeroText />
+      
     </main>
   );
 }
